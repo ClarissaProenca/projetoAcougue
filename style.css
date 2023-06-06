@@ -120,6 +120,18 @@ main {
   margin: 2vh 2vh 0 2vh;
 }
 
+.reveal{
+  position: relative;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: 0.8s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .carnes img {
   height: 30vh;
   width: 28vw;
