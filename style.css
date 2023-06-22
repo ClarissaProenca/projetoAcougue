@@ -120,7 +120,7 @@ main {
   margin: 2vh 2vh 0 2vh;
 }
 
-.reveal{
+/* .reveal{
   position: relative;
   transform: translateY(120px);
   opacity: 0;
@@ -130,7 +130,7 @@ main {
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
-}
+} */
 
 .carnes img {
   height: 30vh;
@@ -221,6 +221,16 @@ form p {
   font-weight: bolder;
   margin-top: 3vh;
   margin-bottom: 1vh;
+  text-align: center;
+}
+
+form span{
+  font-weight: bolder;
+}
+
+form label{
+  font-weight: bolder;
+  margin-bottom: 3vh;
 }
 
 .inputs {
@@ -243,12 +253,8 @@ form p {
   box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.4);
 }
 
-label {
+input, label {
   margin-bottom: 4px;
-}
-
-label:nth-of-type(2) {
-  margin-top: 12px;
 }
 
 input::placeholder {
@@ -256,146 +262,100 @@ input::placeholder {
 }
 
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
-}
-
-.checkmarkRadio{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
+  display: flex;
+  align-items: center;
+  border: solid 2px #b63700;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  background-color: white;
 }
 
-.container:hover input ~ .checkmark, .container:hover input ~ .checkmarkRadio{
-  background-color: #ccc;
+.bolinha{
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
 }
 
-.container input:checked ~ .checkmark, .container input:checked ~ .checkmarkRadio{
+#preferencia {
+  display: flex;
+}
+
+#comunicacoes{
+  display: flex;
+  align-items: center;
+}
+
+.comunicacoes {
+  border: solid 2px #b63700;
+  width: 25px;
+  height: 25px;
+  border-radius: 6%;
+  background-color: white;
+}
+
+.Selecionadas{
   background-color: #b63700;
 }
 
-.checkmarkRadio:after {
-  content: "";
-  position: absolute;
-  display: none;
+#aPreferida{
+  margin: 10vh 0;
 }
 
-.container input:checked ~ .checkmarkRadio:after {
-  display: block;
+.dropbtn {
+  background-color: #b63700;
+  color: white;
+  padding: 10px 5vw;
+  border: none;
+  border-radius: 5px;
 }
 
-.container .checkmarkRadio:after {
- 	top: 6.7px;
-	left: 6.5px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
-}
-
-.checkmark:after{
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .checkmark:after{
-  display: block;
-}
-
-.container .checkmark:after{
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.custom-select {
+.dropdown {
   position: relative;
-  font-family: Arial;
+  display: inline-block;
+  margin-left: 2vw;
 }
 
-.custom-select select {
+.dropdown-content {
   display: none;
-}
-
-.select-selected {
-  background-color: #b63700;
-}
-
-.select-selected:after {
   position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+.dropdown-content p:hover {
+  background-color: #ddd;
   cursor: pointer;
-  user-select: none;
 }
 
-.select-items {
-  position: absolute;
-  background-color: #b63700;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #b63700;} 
+
+.iconActive {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.select-hide {
-  display: none;
-}
 
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+.intermed {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='18px' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
 }
 
 /* ----------botão---------- */

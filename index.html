@@ -7,11 +7,13 @@
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <title>Delícias da Carne Exóticas</title>
+  <!-- conectar google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rye&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+  <!-- -------- -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
@@ -20,7 +22,7 @@
       <a href="#bovinos">Bovinos</a>
       <a href="#suinos">Suínos</a>
       <a href="#exoticas">Exóticos</a>
-      <a href="#">Frutos do mar</a>
+      <a href="#contato">Contato</a>
     </nav>
     <div id="logo">
       <img src="./media/arquivosSite/logoBranca.png" alt="">
@@ -227,66 +229,73 @@
       deliciasdacarne@gmail.com</p>
     <form class="inputs">
       <label for="nome">Nome</label>
-      <input type="text" placeholder="Nome" class="formulario" id="nome" required />
+      <input type="text" placeholder="Nome" class="formulario" id="nome" />
       <label for="email">Email</label>
-      <input type="email" placeholder="Email" class="formulario" id="email" required />
+      <input type="text" placeholder="Email" class="formulario" id="email" />
+      <label for="telefone">Telefone</label>
+      <input type="Telefone" placeholder="Telefone" class="formulario" id="telefone" />
 
-      <p>Qual seu tipo de carne de preferência?</p>
-      <label class="container">Carnes exóticas
-        <input type="radio" checked="checked">
-        <span class="checkmarkRadio"></span>
-      </label>
-      <label class="container">Carnes tradicionais
-        <input type="radio">
-        <span class="checkmarkRadio"></span>
-      </label>
-      <label class="container">Ambas
-        <input type="radio">
-        <span class="checkmarkRadio"></span>
-      </label>
-
-      <p>Tipo de carne favorita:</p>
-      <div class="custom-select" style="width:200px;">
-        <select>
-          <option value="Bovina">Bovina</option>
-          <option value="Suína">Suína</option>
-          <option value="Aves">Aves</option>
-          <option value="Frutos
-  do Ma">Frutos
-            do Mar</option>
-          <option value="Outras">Outras</option>
-        </select>
+      <div>
+        <span>Preferência</span>
+        <div id="preferencia">
+          <div>
+            <p>Carnes exóticas</p>
+            <div class="container">
+              <div class="bolinha"></div>
+            </div>
+          </div>
+          <div>
+            <p>Carnes tradicionais</p>
+            <div class="container">
+              <div class="bolinha"></div>
+            </div>
+          </div>
+          <div>
+            <p>Ambas</p>
+            <div class="container">
+              <div class="bolinha"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- <p>Tipo de carne favorita:</p>
-      <select id="carneFavorita" name="carneFavorita">
-        <option value="Bovina">Bovina</option>
-        <option value="Suína">Suína</option>
-        <option value="Aves">Aves</option>
-        <option value="Frutos
-do Ma">Frutos
-          do Mar</option>
-        <option value="Outras">Outras</option>
-      </select> -->
+      <div id="aPreferida">
+        <span>Tipo de carne favorita:</span>
+        <div class="dropdown">
+          <button class="dropbtn">Escolha</button>
+          <div class="dropdown-content">
+            <p value="Bovina">Bovina</p>
+            <p value="Suína">Suína</p>
+            <p value="Aves">Aves</p>
+            <p value="Frutos do mar">Frutos do mar</p>
+            <p value="Outras">Outras</p>
+          </div>
+        </div>
+      </div>
 
-      <p>Como prefere receber notícias?</p>
-      <label class="container">Todos os meios
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">E-mail
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">SMS
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
+      <div class="m-contato">
+        <span>Receber comunicações por:</span>
+        <div class="checkDefault">
+          <p>Todos os meios</p>
+          <div class="comunicacoes">
+          </div>
+          <div class="checkDefault">
+            <p>E-
+              mail</p>
+            <div class="comunicacoes">
+            </div>
+          </div>
+          <div class="checkDefault">
+            <p>SMS</p>
+            <div class="comunicacoes">
+            </div>
+          </div>
+        </div>
+      </div>
 
       <label>Mensagem</label>
-      <textarea rows="4" cols="50" class="formulario" required>
-        </textarea>
-      <button class="botao popup" role="button" type="submit" onclick="enviar()"><span class="text">Enviar</span>
+      <textarea rows="4" cols="50" class="formulario"></textarea>
+      <button class="botao popup" role="button" onclick="enviar()"><span class="text">Enviar</span>
       </button>
     </form>
 
@@ -325,6 +334,7 @@ do Ma">Frutos
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
 </body>
 
